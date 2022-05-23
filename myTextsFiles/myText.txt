@@ -1,0 +1,4028 @@
+// The website for my Wireframe
+https://www.fluidui.com/editor/live/
+
+// Ideas came from this Youtube
+https://www.youtube.com/watch?v=W1Kttu53qTg
+
+// Like bootstrap
+https://www.youtube.com/watch?v=W1Kttu53qTg
+
+https://www.youtube.com/watch?v=ZGymN8aFsv4
+
+// To convert timestamp to actual timestamp
+https://www.delftstack.com/howto/javascript/javascript-convert-timestamp-to-date/
+
+// To set id check
+https://www.youtube.com/watch?v=QQwo4E_B0y8
+
+// I installed this package for key ckecking
+npm i express-openid-connect dotenv
+
+//I used this documentation to understand more about dotenv
+https://github.com/auth0/express-openid-connect
+
+// Youtube video to explain about how to get spotify songs
+https://www.youtube.com/watch?v=0dmS0He_czs
+
+// To get access to spotify songs
+https://developer.spotify.com/dashboard/login
+
+Client ID ded8f323db1b4feda5882c90a1c32d06
+Client Secret 311f19911b304cd1b82ccd61b27731af 
+
+// setting up youtube developer accounts
+
+//Tutorial
+https://www.youtube.com/watch?v=idYUy3hf3D0
+
+https://developers.google.com/youtube/v3/getting-started?authuser=1
+
+// Generate a new API_KEY
+https://console.cloud.google.com/projectcreate?previousPage=%2Fapis%2Fdashboard%3Fauthuser%3D1%26project%3Dmy-project-25894&organizationId=0&authuser=1
+
+
+API Key:    AIzaSyA9ZcRubHdOkYqfjF3MVPhCLsp_fMgt1Ug
+API Key:    AIzaSyDwWLgzl7aMOyqJ-IZr4FyPi_Y5x2eKNgw
+API Key:    AIzaSyDncfIpqQpKKuqaIRRMXLNyJt9bKmd0XHY
+
+My Youtube API
+https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=date&key=AIzaSyBI2VKuOz2CdgJBXUBfnmyPy7f6fHzwYO8
+https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelType=any&order=date&q=the%20weekend&safeSearch=moderate&key=AIzaSyBI2VKuOz2CdgJBXUBfnmyPy7f6fHzwYO8
+
+
+// The link to css is here
+https://cdnjs.com/libraries/font-awesome
+
+// Icone are here
+https://fontawesome.com/icons/globe?s=solid
+
+// This is how to push the users info. into the database
+https://www.youtube.com/watch?v=-RCnNyD0L-s&t=143s
+
+// I installed passport
+npm i passport passport-local express-session express-flash
+
+// Tutorial on how to use ejs 
+https://www.youtube.com/watch?v=lYVKbAn5Od0
+
+// Tutorial on how to use js in ejs
+https://www.youtube.com/watch?v=EkQc-8uzxIA
+
+// I used this website to convert my image into a url
+https://imgur.com/upload
+my image url is: https://imgur.com/a/Mo0lnRz
+
+// List of country codes to use in order to get videos specific to that country
+https://www.iso.org/obp/ui/#search
+
+// I am using this youtube API now
+// Source: https://developers.google.com/youtube/v3/docs/search/list?apix=true&apix_params=%7B%22part%22%3A%5B%22snippet%22%5D%2C%22maxResults%22%3A1000000000%2C%22regionCode%22%3A%22TZ%22%7D
+
+let url = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1000000000&regionCode=TZ&key=AIzaSyA9ZcRubHdOkYqfjF3MVPhCLsp_fMgt1Ug"
+
+// I have used this youtube to understand how to work with axios, API, ejs and controller
+https://www.youtube.com/watch?v=6LaGLqUHKms 
+
+// I watched this video to figure out how to integrate google verification into my app
+
+// I read on this page on how to use a patern
+http://www.javascriptkit.com/javatutors/re.shtml
+
+// I watched this for validating the email
+https://www.youtube.com/watch?v=2jqok-WgelI
+
+
+// I hid my API key by doing this // This API searches by title
+    let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1000000000&q=${searchedWord}&key=${process.env.API_KEY}`;
+
+    // On my to getting my data to show on songs package
+     <div class="song"><%=searchedTitle[0].snippet.title%></div>
+
+     <div class="song"><%=searchedTitle[8].snippet.title%></div>
+
+// Working code for just one song
+<body>
+  <img src="<%=searchedTitle[8].snippet.thumbnails.high.url %> " alt="gggg"><br>
+  <a href="https://www.youtube.com/watch?v=<%=searchedTitle[8].id.videoId%>>" target="_"><%=searchedTitle[8].snippet.title%></a>
+</body>
+
+<body>
+
+  <div class="container">
+
+    <% searchedTitle.forEach(song => {%>
+
+    <a class="button submit font" href="https://www.youtube.com/watch?v=<%=song.id.videoId%>"><img src="<%=song.snippet.thumbnails.medium.url %> " alt="gggg" target="_"></a>
+
+    <div class="title">
+      <a href="https://www.youtube.com/watch?v=<%=song.id.videoId%>>" target="_"><%=song.snippet.title%></a><br>
+    </div>
+    <br>
+    <% }); %>
+  </div>
+
+</body>
+
+
+// To request an API_KEY
+https://console.cloud.google.com/projectcreate?previousPage=%2Fapis%2Fdashboard%3Fauthuser%3D1%26project%3Dyoutube-create-app-test&organizationId=0&authuser=1
+
+https://console.cloud.google.com/apis/api/youtube.googleapis.com/metrics?project=my-project-2-347501&organizationId=0
+
+
+
+STRETCH GOALS:
+
+remove adds, add play lists, display more data (number of views...), figure out how to find a parmanent key, add intellicense to the search box, make the search icon work, remove links
+
+
+// Working API url
+let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${userTitle.title}&key=${process.env.API_KEY}
+
+
+
+
+<body>
+
+  <div class="image">
+
+    <form class="form container" action="/songsLib" method="POST">
+
+      <h1>Please sign in.</h1>
+
+      <div class="containerParent">
+        <label class='label' for="name">E-mail:</label>
+        <input id="email" class='input font row' type='text' name='email' placeholder="E-mail">
+        <label class='label' for="name">Password:</label>
+        <!-- This line below sets the eye icon -->
+        <input id="password" class='input font row' type='password' name='password' placeholder="Password">
+        <i class="eye fa-solid fa-eye-slash"></i>
+      </div>
+
+
+
+      <div class="submitAndCancelButtons">
+        <div>
+          <input class='submitButton btn btn-primary' type="submit" value="SignIn" />
+        </div>
+        <div>
+          <a class='cancelButton btn btn-warning' href="/homePage">Cancel</a>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</body>
+
+// This is the link for icons
+https://fontawesome.com/search?q=search&s=solid%2Cbrands
+
+
+
+
+
+
+
+API KEYS:
+AIzaSyCLm7XDlOKUwWAVRcNWe2e9JiWEucEoln4
+
+
+
+
+
+
+
+
+
+// I got this code from the above websiteconst { auth } = require('express-openid-connect');
+app.use(
+  auth({
+    issuerBaseURL: 'https://YOUR_DOMAIN',
+    baseURL: 'https://YOUR_APPLICATION_ROOT_URL',
+    clientID: 'YOUR_CLIENT_ID',
+    secret: 'LONG_RANDOM_STRING',
+    idpLogout: true,
+  })
+);
+
+
+// Find a user in the database by id in the edit screen/window
+router.get('/edit', (req, res) => {
+    User.findById(req.params.id).then(userData => {
+        res.render('edit', userData)
+    })
+    res.render('edit');
+})
+
+// This documentation is also helpfull in understanding how to authenticate users
+auth0.com/docs/quickstart/webapp/express
+
+// I installed the line below
+npm install express express-openid-connect --save
+
+// The code below came fron the link above after specifying the port number in the link above
+const { auth } = require('express-openid-connect');
+
+const config = {
+  authRequired: false,
+  auth0Logout: true,
+  secret: 'a long, randomly-generated string stored in env',
+  baseURL: 'http://localhost:4000',
+  clientID: 'vLaV3fSngUrmEfkiHLuDdCsDTqfyXEJg',
+  issuerBaseURL: 'https://dev-wyf7mc9t.us.auth0.com'
+};
+
+// auth router attaches /login, /logout, and /callback routes to the baseURL
+app.use(auth(config));
+
+// req.isAuthenticated is provided from the auth router
+app.get('/', (req, res) => {
+  res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+});
+
+// After running "openssl rand -hex 32" in the terminal
+my secret hex = 677c605e97bb78bce5f50f0d807038db88e2a4aef471b1751aa4c504f97afd94
+
+// Get user profile informathion
+const { requiresAuth } = require('express-openid-connect');
+
+app.get('/profile', requiresAuth(), (req, res) => {
+  res.send(JSON.stringify(req.oidc.user));
+});
+
+
+// // req.isAuthenticated is provided from the auth router
+// app.get('/', (req, res) => {
+//     res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+// });
+
+
+// Fetch does not work. Need to fix it.
+
+
+
+
+
+
+ 4/15/2022      |       Create a database to hold user Accounts
+ 4/16/2022      |       Insert seed Data into databases
+ 4/17/2022      |       Create front Frontend to harvest users data 
+ 4/18/2022      |       Create a superuser to have control over all users accounts
+ 4/19/2022      |       Do user authentification and Authorization
+ 4/20/2022      |       Insert user data into database
+ 4/21/2022      |       Create a Youtube like APP
+ 4/22/2022      |       Create a database (user Accounts)
+ 4/23/2022      |       Find an open API of songs
+ 4/24/2022      |       Transfer songs from API to database  of songs
+ 4/25/2022      |       Let the user search songs by artist name or song title      
+ 4/26/2022      |       Let the user play the song
+
+
+
+router.get("/", (req, res) => {
+    User.find({})
+        .then((userData) => res.render("index", { userData }));
+});
+
+
+// The code below sets up the authentication
+const { auth } = require('express-openid-connect');
+
+const config = {
+    authRequired: false,
+    auth0Logout: true,
+    secret: 'a long, randomly-generated string stored in env',
+    baseURL: 'http://localhost:4000',
+    clientID: 'vLaV3fSngUrmEfkiHLuDdCsDTqfyXEJg',
+    issuerBaseURL: 'https://dev-wyf7mc9t.us.auth0.com'
+};
+
+// Update a user by id in the database, then go to the home screen
+router.put("/:id", (req, res) => {
+    User.findOneAndUpdate({ _id: req.params.id }, req.body).then(
+        (userData) => res.redirect('/')
+    );
+});
+
+
+
+
+
+
+
+const express = require("express");
+const res = require("express/lib/response");
+const User = require("../models/users-models");
+
+// Define a router
+const router = express.Router();
+
+// Render all data form database to the browser "index"
+router.get("/", (req, res) => {
+    User.find({})
+        .then((userData) => res.render('index',{userData}));
+});
+
+// Add a user to the database, then go to the home screen
+router.post("/signUp", (req, res) => {
+    User.create(req.body)
+        .then(() => res.redirect('/'));
+});
+
+// Update a user by id in the database, then go to the home screen
+router.put("/:id", (req, res) => {
+    User.findOneAndUpdate({ _id: req.params.id }, req.body).then(
+        (userData) => res.redirect('/')
+    );
+});
+
+// Find a user in the database by id in the edit screen/window
+router.get('/edit', (req, res) => {
+    User.findById(req.params.id).then(userData => {
+        res.render('edit', userData)
+    })
+    res.render('edit');
+})
+
+router.get('/signUp', (req, res) => {
+    Ingredient.findById(req.params.id).then(userData => {
+        res.render('edit', userData)
+    })
+    res.render('index');
+})
+
+// Delete a user from database, then go to the home screen
+router.delete("/:id", (req, res) => {
+    User.findOneAndRemove({ _id: req.params.id }).then((userData) =>
+        res.redirect('/')
+    );
+});
+
+router.get('/:id', (req, res) => {
+    res.render('signUp');
+})
+
+thead{
+    background-image: linear-gradient(rgb(188, 183, 183), rgb(5, 5, 0), rgb(119, 122, 119));
+    color: yellow;
+    
+}
+
+
+
+
+
+
+
+module.exports = router;
+
+
+
+
+
+
+let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1000000000&order=date&safeSearch=moderate&videoType=any&key=AIzaSyA9ZcRubHdOkYqfjF3MVPhCLsp_fMgt1Ug`
+
+axios.get(url)
+    .then(data => {
+        arraySongs.push(data.data.items)
+
+        //Loop through the entire array of objects, and just grab song title, videoID and thumbnail
+        arraySongs.forEach(song => {
+            song.forEach(eachSong => {
+                let mySong = {
+                    "songTitle": eachSong.snippet.title,
+                    "videoID": eachSong.id.videoId,
+                    "thumbnail": eachSong.snippet.thumbnails.high,
+                    "url": `https://www.youtube.com/watch?v=${eachSong.id.videoId}`
+                };
+                seedSongs.push(mySong)
+            }
+
+            )
+            console.log(seedSongs)
+
+
+
+           // Insert data into database
+            let myJsonseedData = JSON.stringify(seedSongs);
+            Song.deleteMany({})
+                .then(() => {
+                    return Song.insertMany(seedSongs);
+                })
+                .then((res) => console.log(res))
+                .catch((err) => console.log(err))
+                .finally(() => {
+                    process.exit();
+                });
+        })
+    })
+
+
+
+
+
+
+
+
+
+
+require('dotenv').config()
+
+const axios = require('axios')
+const Song = require("../models/songs-models");
+
+// Define an array of objects to hold all songs from the youtube API
+let arraySongs = [];
+
+// Define a new array to hold just some information of interest (songTitle, videoID, thumbnail and video's url)
+let seedSongs = []
+
+let url = '';
+
+
+// I am using this youtube API. This API return results based on specified country
+//url = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1000000000&regionCode=TZ&key=AIzaSyA9ZcRubHdOkYqfjF3MVPhCLsp_fMgt1Ug"
+
+// I am using this youtube API. This API return results for all countries
+//url = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1000000000&regionCode=TZ&key=AIzaSyA9ZcRubHdOkYqfjF3MVPhCLsp_fMgt1Ug"
+
+//
+url = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1000000000&q=Rayvanny&key=AIzaSyA9ZcRubHdOkYqfjF3MVPhCLsp_fMgt1Ug"
+
+// I used this youtube API
+//https://developers.google.com/youtube/v3/docs/search/list?apix_params=%7B%22part%22%3A%5B%22snippet%22%5D%2C%22maxResults%22%3A1000000000%2C%22order%22%3A%22date%22%2C%22safeSearch%22%3A%22moderate%22%2C%22videoType%22%3A%22any%22%7D&apix=true
+
+axios.get(url)
+    .then(data => 
+        
+        console.log(data.data.items))
+
+// Fields of interest
+//let title = 
+    
+// This example is from Youtube.
+function searchByKeyword() {
+  var results = YouTube.Search.list('id,snippet', {q: 'dogs', maxResults: 25});
+
+  for(var i in results.items) {
+    var item = results.items[i];
+    Logger.log('[%s] Title: %s', item.id.videoId, item.snippet.title);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The link below helped me manage pages with css
+  Source: https://stackoverflow.com/questions/29788182/how-do-i-link-all-pages-to-the-same-css-external-file -->
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/signInPage.css" />
+  <title>SongsLib App</title>
+</head>
+
+<body>
+
+  <div class="image">
+
+    <form class="form container" action="/signIn" method="POST">
+
+      <h1>Please sign in.</h1>
+
+      <div class="containerParent">
+        <label class='label' for="name">E-mail:</label>
+        <input id="email" class='input font row' type='text' name='email' placeholder="E-mail">
+        <label class='label' for="name">Password:</label>
+        <!-- This line below sets the eye icon -->
+        <input id="password" class='input font row' type='password' name='password' placeholder="Password">
+        <i class="eye fa-solid fa-eye-slash"></i>
+      </div>
+
+
+
+      <div class="submitAndCancelButtons">
+        <div>
+          <input class='submitButton btn btn-primary' type="submit" value="SignIn" />
+        </div>
+        <div>
+          <a class='cancelButton btn btn-warning' href="/homePage">Cancel</a>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</body>
+
+</html>
+
+
+
+
+// The code below is for songs API and User interaction with the API
+// Sign in page; if the email and password match the account in the database, redirect to songs library app
+
+// The "/songsLib" is what I specified in the action in the forn in the ejs file
+// The "res.render('songsLibPage');" is where the information will be sent to.
+// This code is responsible of capturin searched information in the input box from songsLibPage
+router.post("/songsLib", (req, res) => {
+    userTitle = req.body
+    // console.log(userTitle.title)
+    //res.render('songsLibPage', { searchedTitle: userTitle.title });
+
+
+
+
+
+
+    // Disable the user by selecting the Inactive from the option, then go back to home screen/window
+router.get('/:id/edit', (req, res) => {
+    User.findById(req.params.id)
+        .then(userData => {
+            res.render('editPage', { userData })
+        })
+})
+
+// router.get('/songsLib', (req, res) => {
+//     res.render('songsLibPage', { songs: userTitle.title });
+// })
+
+// router.get('/:id', (req, res) => {
+//     res.render('homePage');
+// })
+
+// router.get('/homePage', (req, res) => {
+//     res.redirect('homePage');
+// })
+
+
+
+// Songs models
+const mongoose = require('../db/connection')
+
+// Structure data in database
+const SongSchema = new mongoose.Schema({
+    songTitle: String,
+    videoID: String,
+    thumbnail: {
+        url:String,
+        width: Number,
+        height: Number
+    },
+    url: String
+}
+);
+
+const Song = mongoose.model('song', SongSchema);
+
+module.exports = Song;
+
+
+
+
+
+
+
+
+/* iPads, Tablets */
+
+@media screen and (max-width: 768px) {
+
+    /* h1 */
+    h1 {
+        font-size: 7vw;
+        text-align: center;
+        color: white;
+        transform: translateY(-5vh);
+    }
+
+    /* input boxes */
+    .input {
+        border-radius: 15px;
+
+    }
+
+    /* Submit button */
+    .submit {
+        border-radius: 15px;
+        font-size: 4vw;
+    }
+
+    /* Cancel button */
+    .cancel {
+        border-radius: 15px;
+        font-size: 4vw;
+        margin: 0 4vw;
+    }
+
+    /* Labels */
+    .label {
+        font-size: 5vw;
+        color: rgb(6, 240, 240);
+        transform: translateX(-1vw);
+    }
+
+    /* center all elements in the body */
+    .inputParent {
+        width: 70vw;
+        font-size: 4vw;
+        transform: translateY(-20vh);
+        display: grid;
+        justify-content: center;
+    }
+
+    /* Backgrounf image */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Submit and cancel buttons */
+    .submitAndCancelButtons {
+        transform: translateY(6vh);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Both forgot eamail and password */
+    body {
+        background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
+    }
+
+
+}
+
+
+
+/* For large Laptops */
+
+@media screen and (max-width: 992px) {
+
+    /* h1 */
+    h1 {
+        font-size: 6vw;
+        text-align: center;
+        color: white;
+        transform: translateY(-5vh);
+    }
+
+    /* input boxes */
+    .input {
+        border-radius: 15px;
+
+    }
+
+    /* Submit button */
+    .submit {
+        border-radius: 15px;
+        font-size: 4vw;
+    }
+
+    /* Cancel button */
+    .cancel {
+        border-radius: 15px;
+        font-size: 4vw;
+        margin: 0 4vw;
+    }
+
+    /* Labels */
+    .label {
+        font-size: 4vw;
+        color: rgb(6, 240, 240);
+        transform: translateX(-1vw);
+    }
+
+    /* center all elements in the body */
+    .inputParent {
+        width: 70vw;
+        font-size: 4vw;
+        transform: translateY(-20vh);
+        display: grid;
+        justify-content: center;
+    }
+
+    /* Backgrounf image */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Submit and cancel buttons */
+    .submitAndCancelButtons {
+        transform: translateY(6vh);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Both forgot eamail and password */
+    body {
+        background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
+    }
+
+}
+
+
+
+
+/* For Big TV's (HD Screens */
+
+@media screen and (max-width: 1280px) {
+
+    /* h1 */
+    h1 {
+        font-size: 5vw;
+        text-align: center;
+        color: white;
+        transform: translateY(-5vh);
+    }
+
+    /* input boxes */
+    .input {
+        border-radius: 15px;
+
+    }
+
+    /* Submit button */
+    .submit {
+        border-radius: 15px;
+        font-size: 4vw;
+    }
+
+    /* Cancel button */
+    .cancel {
+        border-radius: 15px;
+        font-size: 4vw;
+        margin: 0 4vw;
+    }
+
+    /* Labels */
+    .label {
+        font-size: 4vw;
+        color: rgb(6, 240, 240);
+        transform: translateX(-0.5vw);
+    }
+
+    /* center all elements in the body */
+    .inputParent {
+        width: 60vw;
+        font-size: 4vw;
+        transform: translateY(-16vh);
+        display: grid;
+        justify-content: center;
+    }
+
+    /* Backgrounf image */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Submit button */
+    .submit {
+        border-radius: 15px;
+        font-size: 4vw;
+    }
+
+    /* Cancel button */
+    .cancel {
+        border-radius: 15px;
+        font-size: 4vw;
+        margin: 0 4vw;
+    }
+
+    /* Submit and cancel buttons */
+    .submitAndCancelButtons {
+        transform: translateY(6vh);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Both forgot eamail and password */
+    body {
+        background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
+    }
+
+}
+
+
+
+/* For Projectors or Higher Resolution Screens (Full HD) */
+@media screen and (max-width: 1920px) {
+
+    /* h1 */
+    h1 {
+        font-size: 4vw;
+        text-align: center;
+        color: white;
+        transform: translateY(-2vh);
+    }
+
+    /* input boxes */
+    .input {
+        border-radius: 15px;
+
+    }
+
+    /* Submit button */
+    .submit {
+        border-radius: 15px;
+        font-size: 1.5vw;
+    }
+
+    /* Cancel button */
+    .cancel {
+        border-radius: 15px;
+        font-size: 1.5vw;
+        margin: 0 4vw;
+    }
+
+    /* Labels */
+    .label {
+        font-size: 4vw;
+        color: rgb(6, 240, 240);
+        transform: translateX(-0.5vw);
+    }
+
+    /* center all elements in the body */
+    .inputParent {
+        width: 40vw;
+        font-size: 1.5vw;
+        transform: translateY(-12vh);
+        display: grid;
+        justify-content: center;
+    }
+
+    /* Backgrounf image */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Submit and cancel buttons */
+    .submitAndCancelButtons {
+        transform: translateY(6vh);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Both forgot eamail and password */
+    body {
+        background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
+    }
+
+}
+
+
+
+
+
+
+
+// Add a user to the database, then go to the home screen
+router.post("/signUp", (req, res) => {
+
+    // Create a user object
+    let userObject = { firstName, middleName, lastName, gender, email, password } = req.body;
+
+    // Remove/trim extra spaces
+    let userFirstName = userObject.firstName.trim()
+    let userLastName = userObject.lastName.trim()
+    let userGender = userObject.gender.trim()
+    let userEmail = userObject.email.trim()
+    let userPassword = userObject.password.trim()
+
+    // Return a fail message if one the condition below fails
+    if ((userFirstName === "") || (userLastName === "") || (userGender === "") || (userEmail === "") || (userPassword === "")) {
+        const statusMessage = {
+            status: "FAILED",
+            message: "Fill in empty input"
+        }
+    }
+
+    // To check the user's first name matched the pattern specified below.
+    // Source: http://www.javascriptkit.com/javatutors/re.shtml
+    else if (!/^[a-zA-Z ]*$/.test(userFirstName)) {
+        res.json({
+            status: "FAILED",
+            message: "Invalid first name was entered!"
+        })
+    }
+
+      // To check the user's last name matched the pattern specified below.
+    // Source: http://www.javascriptkit.com/javatutors/re.shtml
+    else if (!/^[a-zA-Z ]*$/.test(userLastName)) {
+        res.json({
+            status: "FAILED",
+            message: "Invalid first name was entered!"
+        })
+    }
+
+    // To check the user's email matched the pattern specified below.
+    // Source: http://www.javascriptkit.com/javatutors/re.shtml
+    else if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
+        res.json({
+            status: "FAILED",
+            message: "Invalid name was entered!"
+        })
+
+    }
+
+
+https://www.delftstack.com/howto/javascript/javascript-convert-timestamp-to-date/
+
+    var timestamp = 1607110465663
+var date = new Date(timestamp);
+
+console.log("Date: "+date.getDate()+
+          "/"+(date.getMonth()+1)+
+          "/"+date.getFullYear()+
+          " "+date.getHours()+
+          ":"+date.getMinutes()+
+          ":"+date.getSeconds());
+
+
+
+  //     else
+  //     {
+  //         // Thank the user for signing up
+  //         // Create a variable to hold the "thanks" message
+  //         let thanksMessage = "Thanks for signing up";
+
+  //         console.log(thanksMessage)
+
+  //         // Render the thanks message to the sign up page
+  //      res.render('signUpPage', { thanks: thanksMessage });
+
+  //         //  Push the user's information into the database
+  //         User.create((req.body))
+
+  //         // Redirect the user to home page
+  //      res.redirect('/homePage')
+  //    }
+
+
+
+
+@media screen and (max-width: 480px) {
+ /* Search icon */
+ #searchIcon {
+    font-size: 1vw;
+    transform: translate(21vw, -97.8vh);
+    color: rgb(246, 5, 82);
+}
+
+/* Style the input box */
+input {
+    font-size:xx-small;
+    width: 50vw;
+    border-radius: 30px;
+    padding-left: 2vw;
+}
+
+/* The globe icon */
+.image {
+    background-image: url("images/newHomeImage.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50%;
+    background-position-y: 0vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+   
+
+}
+
+
+ // Send a message to the user to congratulate him/her on signing up
+  const congratMsg = "Congratulations! Your account has been created.";
+
+  res.render('signUpPage', { congratMsg: congratMsg });
+  
+
+  // Working Post message
+
+  // Add a user to the database, then go to the home screen
+router.post("/signUp", (req, res) => {
+  
+  // NOW VALIDATE THE USER
+  // Source: https://www.youtube.com/watch?v=2jqok-WgelI
+
+  //console.log(req.body);
+
+  // Store the error message in the variable in the form of object
+  let error = validationSchema.validate(req.body);
+
+  // For Postman
+  // res.send(errorMsg);
+  // console.log(error.error.details[0].message)
+
+
+  // Show the user the error message
+  if (error) {
+    // Create a variable to hold the error message
+    // const errorMsg = `${error.error.details[0].message.charAt(0)}${error.error.details[0].message.charAt(1).toUpperCase()}${error.error.details[0].message.substring(2)}.`;
+    // const errorMsg = `${typeof(error.error.details[0].message)}`;
+
+    //  const errorMsg = error.error.details[0].message;
+
+    // Print the error message
+    // console.log(errorMsg);
+
+    // res.render("signUpPage", { message: errorMsg });
+    res.redirect("homePage"); 
+  }
+
+
+
+  // Create the accout for the new user if there is no error in the message
+  else {
+    //  Push the user's information into the database
+    User.create(req.body)
+    .then(res.redirect("homePage")); 
+   }
+});
+
+
+
+
+
+
+// Not Working
+
+// Show the user the error message
+  if (error) {
+    // Create a variable to hold the error message
+    // const errorMsg = `${error.error.details[0].message.charAt(0)}${error.error.details[0].message.charAt(1).toUpperCase()}${error.error.details[0].message.substring(2)}.`;
+    // const errorMsg = `${typeof(error.error.details[0].message)}`;
+
+      // const errorMsg = error.error.details[0].message;
+
+    // Print the error message
+    //  console.log(errorMsg);
+
+    const message = `Please click on the "?" on the right for more information.`;
+     res.render("signUpPage", { message: message });
+    res.redirect("signUpPage");
+  }
+
+  // Create the accout for the new user if there is no error in the message
+  else {
+    //  Push the user's information into the database
+    User.create(req.body).then(res.redirect("homePage"));
+  }
+});
+
+
+
+            function firstNameHint() {
+              document.querySelector("#hint").innerHTML = `The first name's length must be greater than 1.`;
+            }
+
+            function func {
+              document.querySelector('#hint').style.visibility = 'hidden';
+            }
+
+            // Wait for 0.5 second, then Call the function "hidePassword" function
+            setTimeout(firstNameHint, 1000)
+
+            func()
+
+
+
+
+     function firstNameHint() {
+              document.querySelector(
+                "#hint"
+              ).innerHTML = `The first name's length must be greater than 1.`;
+            }
+
+            let func = () => {
+              document.querySelector('#hint').style.zIndex = '-1';
+
+            }
+            // Wait for 0.5 second, then Call the function "hidePassword" function
+            setTimeout(firstNameHint, 500)
+
+            func()
+
+            }
+
+
+
+            // Show the user the error message
+  if (error) {
+    // Create a variable to hold the error message
+    // const errorMsg = `${error.error.details[0].message.charAt(0)}${error.error.details[0].message.charAt(1).toUpperCase()}${error.error.details[0].message.substring(2)}.`;
+    // const errorMsg = `${typeof(error.error.details[0].message)}`;
+
+    //  const errorMsg = error.error.details[0].message;
+
+    // Print the error message
+    // console.log(errorMsg);
+
+    res.redirect("signUpPage");
+  }
+
+  // Create the accout for the new user if there is no error in the message
+  if (!error) {
+    console.log("No Error");
+    //  Push the user's information into the database
+    User.create(req.body).then(res => res.redirect("/homePage"));
+  }
+});
+
+
+
+
+
+
+
+// Almost working for finally
+
+router.post("/signUp", (req, res) => {
+  // NOW VALIDATE THE USER
+  // Source: https://www.youtube.com/watch?v=2jqok-WgelI
+  // Store the error message in the variable in the form of object
+  let error = validationSchema.validate(req.body);
+
+  // Let the user know about clicking on the question for more info.
+  const message = `Please click on the "?" on the right for more information.`;
+
+  // Render the message to signUpPage
+  res.render("signUpPage", { message: message });
+
+  // Show the user the error message
+   if (error) {
+     res.redirect("homePage");
+   }
+
+  // Create the accout for the new user if there is no error in the message
+  //  Push the user's information into the database
+  User.create(req.body).then(() => res.redirect("homePage"));
+});
+
+
+// forget page css/* Style h1 */
+h1 {
+    font-size: 2.5vw;
+    text-align: center;
+    color: rgb(233, 200, 5);
+    position: relative;
+    top: 10vh;
+}
+
+/* Style email label */
+#emailLabel{
+    transform: translateX(-13.5vw);
+}
+
+/* Style labels */
+.label {
+    color: rgb(236, 153, 3);
+    margin: 0% 0rem 0rem -10rem;
+    transform: translateX(6.7vw);
+}
+
+
+#passwordField {
+    display: flex;
+    align-items: center;
+    width: 60vw;
+    display: grid;
+    justify-content: center;
+}
+
+/* Style submit button */
+.submitButton {
+    font-size: 1.5vw;
+}
+
+/* Style cancel button */
+.cancelButton {
+    font-size: 1.5vw;
+}
+
+/* Style both submit and cancel buttons */
+.submitAndCancelButtons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    transform: translateY(20vh);
+}
+
+#email, #password {
+    width: 40vw;
+}
+
+.image {
+    background-image: url("images/newHomeImage.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+.containerParent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+/* container for forgot email and password */
+#forgotContainer{
+    display: grid;
+    justify-content: center;
+    transform: translateY(20vh);
+}
+
+body {
+    font-size: 1.5vw;
+    background-color: rgb(54, 46, 7);
+}
+
+
+
+// forget page ejs
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The link below helped me manage pages with css
+  Source: https://stackoverflow.com/questions/29788182/how-do-i-link-all-pages-to-the-same-css-external-file -->
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/forgetPage.css" />
+  <title>SongsLib App</title>
+</head>
+
+<body>
+
+  <div class="image">
+
+  <form class="form" action="/<%=userData._id%>?_method=PUT" method="POST">
+
+    <form class="form" action="/update/:id?_method=PUT" method="POST">
+      <h1 class="h1">Please update your email.</h1>
+      <h1 class="h2">Please update your password.</h1><br><br><br>
+
+      <div class="containerParent">
+        <div>
+          <label class='label' for="name">Enter your e-mail:</label>
+          <input id="email" class='input font row' type='text' name='email' value="<%=userData.email %>"/>
+        </div>
+
+        <div>
+          <label class='label' for="password">Enter your new password:</label>
+          <input id="password" class='input font row' type='text' name='password' value="<%=userData.password %>"/>
+        </div>
+
+
+
+        <div class="submitAndCancelButtons">
+
+          <div>
+            <input class='submitButton btn btn-primary' type="submit" />
+          </div>
+
+          <div>
+            <a class='cancelButton btn btn-warning' href="signIn">Cancel</a>
+          </div>
+
+        </div>
+
+
+    </form>
+
+  </div>
+</body>
+
+</html>
+
+
+// Add these links (just links, the forgetContainer div) in signInPage
+
+<div class="submitAndCancelButtons">
+          <div>
+            <input class='submitButton btn btn-primary' type="submit" value="SignIn" />
+          </div>
+          <div>
+            <a class='cancelButton btn btn-warning' href="/homePage">Cancel</a>
+          </div>
+        </div>
+
+        <div id="forgetContainer">
+          <a class='forget' href="/forgetPage">Forgot your email?</a>
+          <a class='forget' href="/forgetPage">Forgot your password?</a>
+        </div>
+
+
+
+
+
+        // PUT ME POST back please
+
+        router.post("/signUp", (req, res) => {
+  // NOW VALIDATE THE USER
+  // Source: https://www.youtube.com/watch?v=2jqok-WgelI
+  // Store the error message in the variable in the form of object
+  let error = validationSchema.validate(req.body);
+
+  // Let the user know about clicking on the question for more info.
+  const message = `Please click on the "?" on the right for more information.`;
+
+  // Render the message to signUpPage
+  res.render("signUpPage", { message: message });
+
+  // Show the user the error message
+  if (error) {
+    res.redirect("signUpPage");
+  } else {
+    // Create the accout for the new user if there is no error in the message
+    //  Push the user's information into the database
+    User.create(req.body).then(res.redirect("homePage"));
+  }
+});
+
+// Sign in page; if the email and password match the account in the database, redirect to songs library app
+router.post("/signIn", (req, res) => {
+  User.find({ email: req.body.email }).then((userData) => {
+    // console.log(req.body)
+    // console.log(userData)
+
+    let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=500&q=${userTitle.title}&key=${process.env.API_KEY}`;
+
+    if (userData[0].password === req.body.password) {
+      axios.get(url).then((data) => {
+        res.render("songsLibPage", {
+          searchedTitle: data.data.items,
+          userData: userData[0],
+        });
+      });
+    } else {
+      res.redirect("signIn");
+    }
+  });
+});
+
+
+
+
+
+
+
+// Sign in page; if the email and password match the account in the database, redirect to songs library app
+router.post("/signIn", (req, res) => {
+  User.find({ email: req.body.email }).then((userData) => {
+    if (req.body.password === "rr") 
+    {
+      res.redirect("/");
+    } 
+  }
+})
+    
+    else if ((userData[0].email === req.body.email )&&(userData[0].password === req.) {
+      let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=500&q=${userTitle.title}&key=${process.env.API_KEY}`;
+
+      // if (userData[0].password === req.body.password) {
+        axios.get(url).then((data) => {
+          res.render("songsLibPage", {
+            searchedTitle: data.data.items,
+            userData: userData[0],
+          });
+        });
+
+        res.redirect("songsLibpage"); 
+      //}
+    } else {
+      res.redirect("signIn");
+    }
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+For 4K display
+
+@media screen and (max-width: 3840px) {
+
+    /* the 2 h1 */
+    .header {
+        color: rgba(52, 52, 237, 0.983);
+        transform: translateY(-15vh);
+    }
+
+    .h1 {
+        font-size: 4vw;
+        text-align: center;
+        padding: 0vh 1vw;
+        margin: 15rem 3rem 0rem 3rem;
+        display: flex;
+        justify-content: center;
+        transform: translateY(-3vh);
+    }
+
+    .h2 {
+        font-size: 3vw;
+        text-align: center;
+        padding: 0vh 4vw;
+        transform: translateY(-3vh);
+    }
+
+    .signUp {
+        font-size: 2.5vw;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: 0rem 30vw;
+    }
+
+    /* Already signed up link */
+    .signIn {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    /* Already signed up link and he sign up button */
+    .signUpAndIn {
+        font-size: 2.5vw;
+        transform: translateY(-2vh);
+    }
+
+
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    body {
+        font-size: 1.4vw;
+        background-color: rgb(166, 112, 41);
+    }
+}
+
+
+
+/* For Projector */
+
+@media screen and (max-width: 1920px) {
+
+    /* the 2 h1 */
+    .header {
+        color: rgba(52, 52, 237, 0.983);
+        transform: translateY(-16vh);
+    }
+
+    .h1 {
+        font-size: 3vw;
+        text-align: center;
+        padding: 0vh 1vw;
+        margin: 15rem 3rem 0rem 3rem;
+        display: flex;
+        justify-content: center;
+        transform: translateY(-18vhvh);
+    }
+
+    .h2 {
+        font-size: 2.5vw;
+        text-align: center;
+        padding: 0vh 4vw;
+        transform: translateY(-3vh);
+    }
+
+    .signUp {
+        font-size: 2.5vw;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: 0rem 30vw;
+    }
+
+    /* Already signed up link */
+    .signIn {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    /* Already signed up link and he sign up button */
+    .signUpAndIn {
+        font-size: 2.5vw;
+        transform: translateY(-8vh);
+    }
+
+
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    body {
+        font-size: 1.4vw;
+        background-color: rgb(166, 112, 41);
+    }
+}
+
+
+
+@media screen and (max-width: 1280px) {
+
+    /* the 2 h1 */
+    .header {
+        color: rgba(52, 52, 237, 0.983);
+        transform: translateY(-19vh);
+    }
+
+    .h1 {
+        font-size: 5vw;
+        text-align: center;
+        padding: 0vh 1vw;
+        margin: 15rem 3rem 0rem 3rem;
+        display: flex;
+        justify-content: center;
+        transform: translateY(-3vh);
+    }
+
+    .h2 {
+        font-size: 4vw;
+        text-align: center;
+        padding: 0vh 4vw;
+        transform: translateY(-3vh);
+    }
+
+    .signUp {
+        font-size: 4vw;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: 0rem 30vw;
+    }
+
+    /* Already signed up link */
+    .signIn {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    /* Already signed up link and he sign up button */
+    .signUpAndIn {
+        font-size: 4vw;
+        transform: translateY(-5vh);
+    }
+
+
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    body {
+        font-size: 1.4vw;
+        background-color: rgb(166, 112, 41);
+    }
+}
+
+
+
+/* For large laptops */
+
+@media screen and (max-width: 992px) {
+
+    /* the 2 h1 */
+    .header {
+        color: rgba(52, 52, 237, 0.983);
+        transform: translateY(-15vh);
+    }
+
+    .h1 {
+        font-size: 6vw;
+        text-align: center;
+        padding: 0vh 1vw;
+        margin: 15rem 3rem 0rem 3rem;
+        display: flex;
+        justify-content: center;
+        transform: translateY(-3vh);
+    }
+
+    .h2 {
+        font-size: 4vw;
+        text-align: center;
+        padding: 0vh 4vw;
+        transform: translateY(-3vh);
+    }
+
+    .signUp {
+        font-size: 4vw;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: 0rem 30vw;
+    }
+
+    /* Already signed up link */
+    .signIn {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    /* Already signed up link and he sign up button */
+    .signUpAndIn {
+        font-size: 4vw;
+       transform: translateY(-8vh);
+    }
+
+
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    body {
+        font-size: 1.4vw;
+        background-color: rgb(166, 112, 41);
+    }
+}
+
+
+
+
+/* iPads, Tablets */
+
+@media screen and (max-width: 768px) {
+
+    /* the 2 h1 */
+    .header {
+        color: rgba(52, 52, 237, 0.983);
+        transform: translateY(-17vh);
+    }
+
+    .h1 {
+        font-size: 6vw;
+        text-align: center;
+        padding: 0vh 1vw;
+        margin: 15rem 3rem 0rem 3rem;
+        display: flex;
+        justify-content: center;
+        transform: translateY(-3vh);
+    }
+
+    .h2 {
+        font-size: 4vw;
+        text-align: center;
+        padding: 0vh 4vw;
+        transform: translateY(-3vh);
+    }
+
+    .signUp {
+        font-size: 4vw;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: 0rem 30vw;
+    }
+
+    /* Already signed up link */
+    .signIn {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    /* Already signed up link and he sign up button */
+    .signUpAndIn {
+        font-size: 4vw;
+        transform: translateY(-10vh);
+    }
+
+
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    body {
+        font-size: 1.4vw;
+        background-color: rgb(166, 112, 41);
+    }
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px){
+
+}
+
+
+
+
+/* Small devices (portait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px){
+  
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px){
+
+}
+
+
+
+
+/* Large devices (Laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px){
+
+}
+
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px){
+
+}
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px){
+
+}
+
+
+/* For Big TV's (HD Screens */
+@media only screen and (max-width: 1280px){}
+
+
+
+/* For Projector */
+@media screen and (max-width: 1920px) {}
+
+
+
+/* For 4K display */
+@media screen and (max-width: 3840px) {}
+
+
+
+
+
+
+
+
+
+
+
+/* Small devices (portait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+
+
+
+/* Large devices (Laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px){}
+
+
+
+
+
+/* Style email label */
+#emailLabel {
+    font-size: 10vw;
+    transform: translateX(-44vw);
+}
+
+/* Style labels */
+.label {
+    font-size: 10vw;
+    color: rgb(236, 153, 3);
+    transform: translate(-37vw);
+}
+
+/* Style the yes icon */
+.eye {
+    font-size: 7vw;
+    color: rgb(183, 138, 67);
+    transform: translate(103vw, -7.5vh);
+}
+
+/* E-mail and password input boxes  */
+#email, #password {
+    font-size: 8vw;
+    width: 120vw;
+    border-radius: 20vw;
+    padding-left: 6vw;
+}
+
+/* Contains Password fields */
+#passwordField {
+    display: flex;
+    align-items: center;
+    width: 60vw;
+    display: grid;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Style submit button */
+.submitButton {
+    font-size: 8vw;
+    background-color: rgb(22, 11, 96);
+}
+
+/* Style cancel button */
+.cancelButton {
+    font-size: 8vw;
+    background-color: rgb(236, 153, 3);
+}
+
+/* Style both submit and cancel buttons */
+.submitAndCancelButtons {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+    transform: translateY(5vh);
+}
+
+.image {
+    background-image: url("images/newHomeImage.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+.containerParent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 25vh;
+}
+
+/* container for forgot email and password */
+#forgetContainer {
+    display: grid;
+    justify-content: center;
+    transform: translateY(10vh);
+}
+
+body {
+    font-size: 8vw;
+    background-color: rgb(98, 92, 88);
+}
+
+#body{
+    max-width: 300vw;
+    transform: translate(35vw, 10vh);
+    height: 100vh;
+    margin-top: 25vh;
+}
+
+    .containerParent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 25vh;
+    }
+
+    body {
+        font-size: 2.5vw;
+        background-color: rgb(94, 92, 44);
+    }
+
+    #body{
+        transform: translate(15.5vw, 4vh);
+        height: 40vh;
+        margin-top: 25vh;
+    }
+  
+}
+
+
+
+
+
+ /* Style h1 */
+    h1 {
+        font-size: 5vw;
+        text-align: center;
+        color: rgb(246, 154, 4);
+        transform: translateY(15vh);
+    }
+
+    /* Style email label */
+    #emailLabel {
+        font-size: 4vw;
+        transform: translateX(-24vw);
+    }
+
+    /* Style labels */
+    .label {
+        font-size: 4vw;
+        color: rgb(246, 154, 4);
+        transform: translate(-21vw);
+    }
+
+    /* Style the yes icon */
+    .eye {
+        font-size: 4vw;
+        color: rgb(144, 144, 67);
+        transform: translate(44vw, -7.5vh);
+    }
+
+    /* E-mail and password input boxes  */
+    #email, #password {
+        font-size: 3vw;
+        width: 60vw;
+        border-radius: 20vw;
+        padding-left: 6vw;
+    }
+
+    /* Contains Password fields */
+    #passwordField {
+        display: flex;
+        align-items: center;
+        width: 40vw;
+        display: grid;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    /* Style submit button */
+    .submitButton {
+        font-size: 2.5vw;
+        background-color: rgb(22, 11, 96);
+    }
+
+    /* Style cancel button */
+    .cancelButton {
+        font-size: 2.5vw;
+        background-color: rgb(246, 154, 4);
+    }
+
+    /* Style both submit and cancel buttons */
+    .submitAndCancelButtons {
+        display: flex;
+        justify-content: center;
+        gap: 4vw;
+        transform: translateY(5vh);
+    }
+
+
+
+
+    /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px){
+
+    /* h1 */
+    h1 {
+        font-size: 4vw;
+        text-align: center;
+        color: white;
+        transform: translateY(-7vh);
+    }
+
+    /* input boxes */
+    .input {
+        border-radius: 15px;
+
+    }
+
+    /* Submit button */
+    .submit {
+        border-radius: 10vw;
+        font-size: 4vw;
+    }
+
+    /* Cancel button */
+    .cancel {
+        border-radius: 10vw;
+        font-size: 4vw;
+        margin: 0 4vw;
+    }
+
+    /* Labels */
+    .label {
+        font-size: 4vw;
+        color: rgb(6, 240, 240);
+        transform: translateX(-1.5vw);
+    }
+
+    /* center all elements in the body */
+    .inputParent {
+        width: 40vw;
+        font-size: 3.5vw;
+        display: grid;
+        justify-content: center;
+        transform: translateY(-8vh);
+    }
+
+    /* Backgrounf image */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Submit and cancel buttons */
+    .submitAndCancelButtons {
+        transform: translateY(12vh);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Blink the error message by changing the color from yellow to red */
+    @keyframes errorMsg {
+        from {
+            color: yellow;
+        }
+
+        to {
+            color: red;
+        }
+    }
+
+    /* Format the error message */
+    #error {
+        color: yellow;
+        animation: errorMsg;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        text-align: center;
+        position: relative;
+        top: 2vh;
+        position: relative;
+        z-index: -1;
+    }
+
+    /* Both forgot eamail and password */
+    body {
+        background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
+    }
+
+}
+
+
+
+
+
+
+
+/* h1 */
+    h1 {
+        font-size: 2.5vw;
+        text-align: center;
+        color: white;
+        transform: translateY(-2vh);
+    }
+
+    /* input boxes */
+    .input {
+        border-radius: 15px;
+    }
+
+    /* Submit button */
+    .submit {
+        border-radius: 15px;
+        font-size: 1.5vw;
+    }
+
+    /* Cancel button */
+    .cancel {
+        border-radius: 15px;
+        font-size: 1.5vw;
+        margin: 0 3vw;
+    }
+
+    /* Labels */
+    .label {
+        font-size: 1.7vw;
+        color: rgb(6, 240, 240);
+        transform: translateX(-0.2vw);
+    }
+
+    /* center all elements in the body */
+    .inputParent {
+        width: 40vw;
+        font-size: 1.5vw;
+        display: grid;
+        justify-content: center;
+        transform: translateY(-15vh);
+    }
+
+      /* Style all question mark icons */
+      .questionMark{
+        color: 50px; 
+        color: rgb(246, 35, 3);
+        transform: translate(10px, -55px);
+
+    }
+
+    /* Reduce the gaps between first and middle name, middle name and last name, last name and email, and email and password */
+    .someInputs{
+        margin-bottom: -10px;
+    }
+
+    /* Backgrounf image */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Submit and cancel buttons */
+    .submitAndCancelButtons {
+        transform: translateY(8vh);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Blink the error message by changing the color from yellow to red */
+    @keyframes errorMsg {
+        from {
+            color: yellow;
+        }
+
+        to {
+            color: red;
+        }
+    }
+
+    /* Format the error message */
+    #error {
+        color: yellow;
+        animation: errorMsg;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        text-align: center;
+        position: relative;
+        top: 2vh;
+        position: relative;
+        z-index: -1;
+    }
+
+    /* Both forgot eamail and password */
+    body {
+        background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
+    }
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    /* Search icon */
+    #searchIcon {
+        font-size: 3vw;
+        transform: translate(30vw, -95.8vh);
+        color: rgb(246, 5, 82);
+    }
+
+    /* Style the input box */
+    input {
+        font-size: 4vw;
+        width: 70vw;
+        border-radius: 30px;
+        padding-left: 2vw;
+    }
+
+    /* The globe icon */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 20%;
+        background-position-y: -4vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Published time */
+    #publishedTime {
+        color: chartreuse;
+        font-size: 1vw;
+        padding: 0 auto;
+    }
+
+    /* The top part above all videos */
+    .containerSearch {
+        display: grid;
+        justify-content: center;
+        position: relative;
+        top: 5vh;
+    }
+
+
+
+    /* This contains all videos */
+    .container {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+        grid-gap: 1vw;
+        transform: translateY(-80vh);
+    }
+
+    img {
+        height: 18vh;
+        width: 36vw;
+    }
+
+    body {
+        background-color: rgb(0, 0, 2);
+    }
+
+}
+
+
+
+
+/* Small devices (portait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+    /* Search icon */
+    #searchIcon {
+        font-size: 3vw;
+        transform: translate(30vw, -95.8vh);
+        color: rgb(246, 5, 82);
+    }
+
+    /* Style the input box */
+    input {
+        font-size: 4vw;
+        width: 70vw;
+        border-radius: 30px;
+        padding-left: 2vw;
+    }
+
+    /* The globe icon */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 20%;
+        background-position-y: -4vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Published time */
+    #publishedTime {
+        color: chartreuse;
+        font-size: 1vw;
+        padding: 0 auto;
+    }
+
+    /* The top part above all videos */
+    .containerSearch {
+        display: grid;
+        justify-content: center;
+        position: relative;
+        top: 5vh;
+    }
+
+
+
+    /* This contains all videos */
+    .container {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+        grid-gap: 1vw;
+        transform: translateY(-75vh);
+    }
+
+    img {
+        height: 18vh;
+        width: 36vw;
+    }
+
+    body {
+        background-color: rgb(0, 0, 2);
+    }
+
+}
+
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+
+    /* Search icon */
+    #searchIcon {
+        font-size: 3vw;
+        transform: translate(30vw, -95.8vh);
+        color: rgb(246, 5, 82);
+    }
+
+    /* Style the input box */
+    input {
+        font-size: 4vw;
+        width: 70vw;
+        border-radius: 30px;
+        padding-left: 2vw;
+    }
+
+    /* The globe icon */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 20%;
+        background-position-y: 4vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Published time */
+    #publishedTime {
+        color: chartreuse;
+        font-size: 2vw;
+        padding: 0 auto;
+    }
+
+    /* The top part above all videos */
+    .containerSearch {
+        display: grid;
+        justify-content: center;
+        position: relative;
+        top: 5vh;
+    }
+
+
+
+    /* This contains all videos */
+    .container {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+        grid-gap: 1vw;
+        transform: translateY(-65vh);
+    }
+
+    img {
+        height: 18vh;
+        width: 36vw;
+    }
+
+    body {
+        background-color: rgb(0, 0, 2);
+    }
+
+}
+
+
+
+
+/* Large devices (Laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    /* Search icon */
+    #searchIcon {
+        font-size: 3vw;
+        transform: translate(30vw, -95.8vh);
+        color: rgb(246, 5, 82);
+    }
+
+    /* Style the input box */
+    input {
+        font-size: 4vw;
+        width: 70vw;
+        border-radius: 30vw;
+        padding-left: 2vw;
+    }
+
+    /* The globe icon */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 20%;
+        background-position-y: 4vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Published time */
+    #publishedTime {
+        color: chartreuse;
+        font-size: 1.5vw;
+        padding: 0 auto;
+    }
+
+    /* The top part above all videos */
+    .containerSearch {
+        display: grid;
+        justify-content: center;
+        position: relative;
+        top: 5vh;
+    }
+
+
+
+    /* This contains all videos */
+    .container {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
+        gap: 32px;
+        transform: translateY(-55vh);
+        padding: 0 2vw;
+    }
+
+    img {
+        height: 25vh;
+        width: 36vw;
+    }
+
+    body {
+        background-color: rgb(0, 0, 2);
+    }
+
+}
+
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    /* Search icon */
+    #searchIcon {
+        font-size: 3vw;
+        transform: translate(31vw, -92.8vh);
+        color: rgb(246, 5, 82);
+    }
+
+    /* Style the input box */
+    input {
+        font-size: 3.5vw;
+        width: 70vw;
+        border-radius: 30vw;
+        padding-left: 2vw;
+    }
+
+    /* The globe icon */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 20%;
+        background-position-y: 4vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Published time */
+    #publishedTime {
+        color: chartreuse;
+        font-size: 1.2vw;
+        padding: 0 auto;
+    }
+
+    /* The top part above all videos */
+    .containerSearch {
+        display: grid;
+        justify-content: center;
+        position: relative;
+        top: 5vh;
+    }
+
+
+
+    /* This contains all videos */
+    .container {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
+        gap: 32px;
+        transform: translateY(-55vh);
+        padding: 0 2vw;
+    }
+
+    img {
+        height: 20vh;
+        width: 25vw;
+    }
+
+    body {
+        background-color: rgb(0, 0, 2);
+    }
+
+}
+
+
+
+/* For Big TV's (HD Screens */
+@media only screen and (max-width: 1280px) {
+
+    /* Search icon */
+    #searchIcon {
+        font-size: 3vw;
+        transform: translate(31vw, -92.8vh);
+        color: rgb(246, 5, 82);
+    }
+
+    /* Style the input box */
+    input {
+        font-size: 3.5vw;
+        width: 70vw;
+        border-radius: 30vw;
+        padding-left: 2vw;
+    }
+
+    /* The globe icon */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 20%;
+        background-position-y: 4vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Published time */
+    #publishedTime {
+        color: chartreuse;
+        font-size: 0.6vw;
+        padding: 0 auto;
+    }
+
+    /* The top part above all videos */
+    .containerSearch {
+        display: grid;
+        justify-content: center;
+        position: relative;
+        top: 5vh;
+    }
+
+    a {
+        font-size: 1.5vw;
+        text-decoration: none;
+        padding: 0 2vw;
+    }
+
+
+    /* This contains all videos */
+    .container {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+        gap: 16px;
+        transform: translateY(-55vh);
+        padding: 0 2vw;
+    }
+
+    img {
+        height: 20vh;
+        width: 25vw;
+    }
+
+    body {
+        background-color: rgb(0, 0, 2);
+    }
+
+}
+
+
+
+/* For Projector */
+@media screen and (max-width: 1920px) {
+
+    /* Search icon */
+    #searchIcon {
+        font-size: 3vw;
+        transform: translate(31vw, -92.8vh);
+        color: rgb(246, 5, 82);
+    }
+
+    /* Style the input box */
+    input {
+        font-size: 3.5vw;
+        width: 70vw;
+        border-radius: 30vw;
+        padding-left: 2vw;
+    }
+
+    /* The globe icon */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 20%;
+        background-position-y: 4vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Published time */
+    #publishedTime {
+        color: chartreuse;
+        font-size: 1vw;
+        padding: 0 auto;
+    }
+
+    /* The top part above all videos */
+    .containerSearch {
+        display: grid;
+        justify-content: center;
+        position: relative;
+        top: 5vh; 
+    }
+
+
+
+    /* This contains all videos */
+    .container {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(550px, max-content));
+        grid-gap: 16px;
+
+
+
+        /* grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
+        column-gap: 100px;
+        transform: translateY(-55vh);
+        padding: 0 5vw; */
+    }
+
+    img {
+        height: 25vh;
+        width: 25vw;
+    }
+
+    body {
+        background-color: rgb(0, 0, 2);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 600px) {
+
+    .bodyContainer{
+        background-color: red;
+    }
+
+    /* h1 */
+    h1 {
+        font-size: 12vw;
+        text-align: center;
+        color: rgb(252, 247, 247);
+        transform: translateY(-10vh);
+    }
+
+    /* input boxes */
+    .input {
+        border-radius: 10vw;
+        padding-left: 2vw;
+    }
+
+    /* Submit button */
+    .submit {
+        border-radius: 10vw;
+        font-size: 5vw
+    }
+
+    /* Cancel button */
+    .cancel {
+        border-radius: 10vw;
+        font-size: 5vw;
+        margin: 0 5vw
+    }
+
+    /* Labels */
+    .label {
+        font-size: 8vw;
+        color: rgb(242, 246, 3);
+        transform: translateX(-0.2vw);
+    }
+
+    /* center all elements in the body */
+    .inputParent {
+        font-size: 8vw;
+        display: grid;
+        align-items: center;
+    }
+
+
+    /* Style all question mark icons */
+    .questionMark {
+        font-size: 8vw;
+        color: rgb(242, 246, 3);
+        transform: translate(92vw, -7.5vh);
+    }
+
+    /* Gap btween first and middle name */
+    #fName {
+        margin-bottom: -4vh;
+    }
+
+    #mName {
+        margin-bottom: 4vh;
+    }
+
+    /* Gap between middle and last name */
+    #lName {
+        margin-bottom: -4vh;
+    }
+
+    #email {
+        margin-bottom: -4vh;
+    }
+
+    .inputBox {
+        font-size: 5vw;
+        width: 90vw;
+        margin-bottom: -5vw;
+    }
+
+    /* Submit and cancel buttons */
+    .submitAndCancelButtons {
+        transform: translateY(8vh);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Blink the error message by changing the color from yellow to red */
+    @keyframes errorMsg {
+        from {
+            color: yellow;
+        }
+
+        to {
+            color: red;
+        }
+    }
+
+    /* Format the error message */
+    #error {
+        font-size: 5vw;
+        color: yellow;
+        animation: errorMsg;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        text-align: center;
+        position: relative;
+        top: 2vh;
+        position: relative;
+        z-index: -1;
+    }
+
+    #hint {
+        text-align: center;
+        font-size: 5vw;
+        padding-top: 2vh;
+        color: yellow;
+    }
+
+    .signUpContainer {
+       position: relative;
+       left: 55vw;
+       top: 30vh;
+
+    }
+
+
+    /* Backgrounf image */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    
+    .bodyContainer{
+        display: flex;
+        align-items: center;
+    }
+
+    /* Both forgot eamail and password */
+    body {
+        background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
+    }
+
+}
+
+
+
+
+/* Small devices (portait tablets and large phones, 600px and up) */
+@media (min-width: 600px) {
+
+    .bodyContainer{
+        background-color: rgb(181, 219, 16);
+    }
+
+
+    /* h1 */
+    h1 {
+        font-size: 12vw;
+        text-align: center;
+        color: rgb(252, 247, 247);
+        transform: translateY(-10vh);
+    }
+
+    /* input boxes */
+    .input {
+        border-radius: 10vw;
+        padding-left: 2vw;
+    }
+
+    /* Submit button */
+    .submit {
+        border-radius: 10vw;
+        font-size: 5vw
+    }
+
+    /* Cancel button */
+    .cancel {
+        border-radius: 10vw;
+        font-size: 5vw;
+        margin: 0 5vw
+    }
+
+    /* Labels */
+    .label {
+        font-size: 8vw;
+        color: rgb(242, 246, 3);
+        transform: translateX(-0.2vw);
+    }
+
+    /* center all elements in the body */
+    .inputParent {
+        font-size: 8vw;
+        display: grid;
+        align-items: center;
+    }
+
+    /* Style all question mark icons */
+    .questionMark {
+        font-size: 8vw;
+        color: rgb(242, 246, 3);
+        transform: translate(92vw, -7.5vh);
+    }
+
+    /* Gap btween first and middle name */
+    #fName {
+        margin-bottom: -4vh;
+    }
+
+    #mName {
+        margin-bottom: 4vh;
+    }
+
+    /* Gap between middle and last name */
+    #lName {
+        margin-bottom: -4vh;
+    }
+
+    #email {
+        margin-bottom: -4vh;
+    }
+
+    .inputBox {
+        font-size: 5vw;
+        width: 90vw;
+        margin-bottom: -5vw;
+    }
+
+    /* Submit and cancel buttons */
+    .submitAndCancelButtons {
+        transform: translateY(8vh);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Blink the error message by changing the color from yellow to red */
+    @keyframes errorMsg {
+        from {
+            color: yellow;
+        }
+
+        to {
+            color: red;
+        }
+    }
+
+    /* Format the error message */
+    #error {
+        font-size: 5vw;
+        color: yellow;
+        animation: errorMsg;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        text-align: center;
+        position: relative;
+        top: 2vh;
+        position: relative;
+        z-index: -1;
+    }
+
+    #hint {
+        text-align: center;
+        font-size: 5vw;
+        padding-top: 2vh;
+        color: yellow;
+    }
+
+    .signUpContainer {
+       position: relative;
+       left: 55vw;
+       top: 30vh;
+
+    }
+
+
+    /* Backgrounf image */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    
+
+    /* Both forgot eamail and password */
+    body {
+        background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
+    }
+
+}
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    .bodyContainer{
+        background-color: rgb(34, 0, 255);
+    }
+
+
+    /* h1 */
+    h1 {
+        font-size: 10vw;
+        text-align: center;
+        color: rgb(252, 247, 247);
+        transform: translateY(-10vh);
+    }
+
+    /* input boxes */
+    .input {
+        border-radius: 10vw;
+        padding-left: 2vw;
+    }
+
+    /* Submit button */
+    .submit {
+        border-radius: 10vw;
+        font-size: 5vw
+    }
+
+    /* Cancel button */
+    .cancel {
+        border-radius: 10vw;
+        font-size: 5vw;
+        margin: 0 5vw
+    }
+
+    /* Labels */
+    .label {
+        font-size: 5vw;
+        color: rgb(242, 246, 3);
+        transform: translateX(-0.2vw);
+    }
+
+    /* center all elements in the body */
+    .inputParent {
+        font-size: 8vw;
+        display: grid;
+        align-items: center;
+    }
+
+    /* Style all question mark icons */
+    .questionMark {
+        font-size: 7vw;
+        color: rgb(242, 246, 3);
+        transform: translate(92vw, -7.5vh);
+    }
+
+    /* Gap btween first and middle name */
+    #fName {
+        margin-bottom: -4vh;
+    }
+
+    #mName {
+        margin-bottom: 4vh;
+    }
+
+    /* Gap between middle and last name */
+    #lName {
+        margin-bottom: -4vh;
+    }
+
+    #email {
+        margin-bottom: -4vh;
+    }
+
+    .inputBox {
+        font-size: 5vw;
+        width: 90vw;
+        margin-bottom: -5vw;
+    }
+
+    /* Submit and cancel buttons */
+    .submitAndCancelButtons {
+        transform: translateY(8vh);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Blink the error message by changing the color from yellow to red */
+    @keyframes errorMsg {
+        from {
+            color: yellow;
+        }
+
+        to {
+            color: red;
+        }
+    }
+
+    /* Format the error message */
+    #error {
+        font-size: 5vw;
+        color: yellow;
+        animation: errorMsg;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        text-align: center;
+        position: relative;
+        top: 2vh;
+        position: relative;
+        z-index: -1;
+    }
+
+    #hint {
+        text-align: center;
+        font-size: 5vw;
+        padding-top: 2vh;
+        color: yellow;
+    }
+
+    .signUpContainer {
+       position: relative;
+       left: 58vw;
+       top: 30vh;
+
+    }
+
+
+    /* Backgrounf image */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    
+
+    /* Both forgot eamail and password */
+    body {
+        background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
+    }
+
+}
+
+
+
+
+/* Large devices (Laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    .bodyContainer{
+        background-color: rgb(185, 3, 226);
+    } 
+    
+    /* h1 */
+    h1 {
+        font-size: 8vw;
+        text-align: center;
+        color: rgb(252, 247, 247);
+        transform: translateY(-10vh);
+    }
+
+    /* input boxes */
+    .input {
+        border-radius: 10vw;
+        padding-left: 2vw;
+    }
+
+    /* Submit button */
+    .submit {
+        border-radius: 10vw;
+        font-size: 5vw
+    }
+
+    /* Cancel button */
+    .cancel {
+        border-radius: 10vw;
+        font-size: 5vw;
+        margin: 0 5vw
+    }
+
+    /* Labels */
+    .label {
+        font-size: 5vw;
+        color: rgb(242, 246, 3);
+        transform: translateX(-0.2vw);
+    }
+
+    /* center all elements in the body */
+    .inputParent {
+        font-size: 8vw;
+        display: grid;
+        align-items: center;
+    }
+
+    /* Style all question mark icons */
+    .questionMark {
+        font-size: 7vw;
+        color: rgb(242, 246, 3);
+        transform: translate(92vw, -9.5vh);
+    }
+
+    /* Gap btween first and middle name */
+    #fName {
+        margin-bottom: -6vw;
+    }
+
+    #mName {
+        margin-bottom: 4vh;
+    }
+
+    /* Gap between middle and last name */
+    #lName {
+        margin-bottom: -6vw;
+    }
+
+    #email {
+        margin-bottom: -6vw;
+    }
+
+    .inputBox {
+        font-size: 5vw;
+        width: 90vw;
+        margin-bottom: -5vw;
+    }
+
+    /* Submit and cancel buttons */
+    .submitAndCancelButtons {
+        transform: translateY(8vh);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Blink the error message by changing the color from yellow to red */
+    @keyframes errorMsg {
+        from {
+            color: yellow;
+        }
+
+        to {
+            color: red;
+        }
+    }
+
+    /* Format the error message */
+    #error {
+        font-size: 5vw;
+        color: yellow;
+        animation: errorMsg;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        text-align: center;
+        position: relative;
+        top: 2vh;
+        position: relative;
+        z-index: -1;
+    }
+
+    #hint {
+        text-align: center;
+        font-size: 5vw;
+        padding-top: 2vh;
+        color: yellow;
+    }
+
+    .signUpContainer {
+       position: relative;
+       left: 58vw;
+       top: 30vh;
+
+    }
+
+
+    /* Backgrounf image */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    
+
+    /* Both forgot eamail and password */
+    body {
+        background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
+    }
+
+}
+
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    .bodyContainer{
+        background-color: rgb(37, 186, 4);
+    }
+
+     /* h1 */
+     h1 {
+        font-size: 7vw;
+        text-align: center;
+        color: rgb(252, 247, 247);
+        transform: translateY(-2vh);
+    }
+
+    /* input boxes */
+    .input {
+        border-radius: 10vw;
+        padding-left: 2vw;
+    }
+
+    /* Submit button */
+    .submit {
+        border-radius: 10vw;
+        font-size: 4vw
+    }
+
+    /* Cancel button */
+    .cancel {
+        border-radius: 10vw;
+        font-size: 4vw;
+        margin: 0 5vw
+    }
+
+    /* Labels */
+    .label {
+        font-size: 4.5vw;
+        color: rgb(242, 246, 3);
+        transform: translateX(-0.2vw);
+    }
+
+    /* center all elements in the body */
+    .inputParent {
+        font-size: 8vw;
+        display: grid;
+        align-items: center;
+    }
+
+    /* Style all question mark icons */
+    .questionMark {
+        font-size: 5vw;
+        color: rgb(242, 246, 3);
+        transform: translate(92vw, -9.5vh);
+    }
+
+    /* Gap btween first and middle name */
+    #fName {
+        margin-bottom: -6vw;
+    }
+
+    #mName {
+        margin-bottom: 4vh;
+    }
+
+    /* Gap between middle and last name */
+    #lName {
+        margin-bottom: -6vw;
+    }
+
+    #email {
+        margin-bottom: -6vw;
+    }
+
+    .inputBox {
+        font-size: 4vw;
+        width: 90vw;
+        margin-bottom: -5vw;
+    }
+
+    /* Submit and cancel buttons */
+    .submitAndCancelButtons {
+        transform: translateY(8vh);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Blink the error message by changing the color from yellow to red */
+    @keyframes errorMsg {
+        from {
+            color: yellow;
+        }
+
+        to {
+            color: red;
+        }
+    }
+
+    /* Format the error message */
+    #error {
+        font-size: 5vw;
+        color: yellow;
+        animation: errorMsg;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        text-align: center;
+        position: relative;
+        top: 2vh;
+        position: relative;
+        z-index: -1;
+    }
+
+    #hint {
+        text-align: center;
+        font-size: 5vw;
+        padding-top: 2vh;
+        color: yellow;
+    }
+
+    .signUpContainer {
+       position: relative;
+       left: 58vw;
+       top: 30vh;
+
+    }
+
+
+    /* Backgrounf image */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    
+
+    /* Both forgot eamail and password */
+    body {
+        background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
+    }
+
+}
+
+
+/* For Big TV's (HD Screens */
+@media only screen and (max-width: 1280px) {
+
+/* h1 */
+h1 {
+    font-size: 7vw;
+    text-align: center;
+    color: rgb(252, 247, 247);
+    transform: translateY(-2vh);
+}
+
+/* input boxes */
+.input {
+    border-radius: 10vw;
+    padding-left: 2vw;
+}
+
+/* Submit button */
+.submit {
+    border-radius: 10vw;
+    font-size: 4vw
+}
+
+/* Cancel button */
+.cancel {
+    border-radius: 10vw;
+    font-size: 4vw;
+    margin: 0 5vw
+}
+
+/* Labels */
+.label {
+    font-size: 4.5vw;
+    color: rgb(242, 246, 3);
+    transform: translateX(-0.2vw);
+}
+
+/* center all elements in the body */
+.inputParent {
+    font-size: 8vw;
+    display: grid;
+    align-items: center;
+}
+
+/* Style all question mark icons */
+.questionMark {
+    font-size: 5vw;
+    color: rgb(242, 246, 3);
+    transform: translate(92vw, -9.5vh);
+}
+
+/* Gap btween first and middle name */
+#fName {
+    margin-bottom: -6vw;
+}
+
+#mName {
+    margin-bottom: 4vh;
+}
+
+/* Gap between middle and last name */
+#lName {
+    margin-bottom: -6vw;
+}
+
+#email {
+    margin-bottom: -6vw;
+}
+
+.inputBox {
+    font-size: 4vw;
+    width: 90vw;
+    margin-bottom: -5vw;
+}
+
+/* Submit and cancel buttons */
+.submitAndCancelButtons {
+    transform: translateY(8vh);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Blink the error message by changing the color from yellow to red */
+@keyframes errorMsg {
+    from {
+        color: yellow;
+    }
+
+    to {
+        color: red;
+    }
+}
+
+/* Format the error message */
+#error {
+    font-size: 5vw;
+    color: yellow;
+    animation: errorMsg;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    text-align: center;
+    position: relative;
+    top: 2vh;
+    position: relative;
+    z-index: -1;
+}
+
+#hint {
+    text-align: center;
+    font-size: 5vw;
+    padding-top: 2vh;
+    color: yellow;
+}
+
+.signUpContainer {
+   position: relative;
+   left: 58vw;
+   top: 30vh;
+
+}
+
+
+/* Backgrounf image */
+.image {
+    background-image: url("images/newHomeImage.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+
+/* Both forgot eamail and password */
+body {
+    background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
+}
+
+}
+
+
+
+/* For Projector */
+@media screen and (max-width: 1920px) {
+
+    .bodyContainer{
+        background-color: rgb(72, 43, 43);
+    }
+
+/* h1 */
+h1 {
+    font-size: 4vw;
+    text-align: center;
+    color: rgb(252, 247, 247);
+    transform: translate(-10vw, -10vh);
+}
+
+/* input boxes */
+.input {
+    border-radius: 10vw;
+    padding-left: 2vw;
+}
+
+/* Submit button */
+.submit {
+    border-radius: 10vw;
+    font-size: 2vw
+}
+
+/* Cancel button */
+.cancel {
+    border-radius: 10vw;
+    font-size: 2vw;
+    margin: 0 5vw
+}
+
+/* Labels */
+.label {
+    font-size: 2.5vw;
+    color: rgb(242, 246, 3);
+    transform: translateX(-0.2vw);
+}
+
+/* center all elements in the body */
+.inputParent {
+    display: grid;
+    align-items: center;
+}
+
+/* Style all question mark icons */
+.questionMark {
+    font-size: 3vw;
+    color: rgb(242, 246, 3);
+    transform: translate(51vw, -9vh);
+}
+
+/* Gap btween first and middle name */
+#fName {
+    margin-bottom: -3vw;
+}
+
+#mName {
+    margin-bottom: 4vh;
+}
+
+/* Gap between middle and last name */
+#lName {
+    margin-bottom: -3vw;
+}
+
+#email {
+    margin-bottom: -3vw;
+}
+
+.inputBox {
+    font-size: 2vw;
+    width: 50vw;
+    margin-bottom: -5vw;
+}
+
+/* Submit and cancel buttons */
+.submitAndCancelButtons {
+    transform: translate(-6vw, 8vh);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Blink the error message by changing the color from yellow to red */
+@keyframes errorMsg {
+    from {
+        color: yellow;
+    }
+
+    to {
+        color: red;
+    }
+}
+
+/* Format the error message */
+#error {
+    font-size: 2.5vw;
+    color: yellow;
+    animation: errorMsg;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    text-align: center;
+    position: relative;
+    top: -5vh;
+    left: -7vw;
+    z-index: -1;
+}
+
+#hint {
+    text-align: center;
+    font-size: 3vw;
+    padding-top: 2vh;
+    color: yellow;
+}
+
+.signUpContainer {
+   position: relative;
+   left: 58vw;
+   top: 22vh;
+
+}
+
+
+/* Backgrounf image */
+.image {
+    background-image: url("images/newHomeImage.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+
+/* Both forgot eamail and password */
+body {
+    background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
+}
+
+}
+
+
+
+/* For 4K display */
+@media screen and (max-width: 3840px) {
+
+    .bodyContainer{
+        background-color: rgb(158, 117, 185);
+    }
+
+/* h1 */
+h1 {
+    font-size: 1.5vw;
+    text-align: center;
+    color: rgb(252, 247, 247);
+    transform: translate(-7vw, -5vh);
+}
+
+/* input boxes */
+.input {
+    border-radius: 10vw;
+    padding-left: 2vw;
+}
+
+/* Submit button */
+.submit {
+    border-radius: 10vw;
+    font-size: 1vw
+}
+
+/* Cancel button */
+.cancel {
+    border-radius: 10vw;
+    font-size: 1vw;
+    margin: 0 5vw
+}
+
+/* Labels */
+.label {
+    font-size: 1vw;
+    color: rgb(242, 246, 3);
+    transform: translateX(0.2vw);
+}
+
+/* center all elements in the body */
+.inputParent {
+    display: grid;
+    align-items: center;
+}
+
+/* Style all question mark icons */
+.questionMark {
+    font-size: 1vw;
+    color: rgb(242, 246, 3);
+    transform: translate(20.4vw, -4vh);
+}
+
+/* Gap btween first and middle name */
+#fName {
+    margin-bottom: -1vw;
+}
+
+#mName {
+    margin-bottom: 2vh;
+}
+
+/* Gap between middle and last name */
+#lName {
+    margin-bottom: -1vw;
+}
+
+#email {
+    margin-bottom: -1vw;
+}
+
+.inputBox {
+    font-size: 1vw;
+    width: 20vw;
+    margin-bottom: -5vw;
+    padding-left: 1vw;
+}
+
+/* Submit and cancel buttons */
+.submitAndCancelButtons {
+    transform: translate(2vw, -1vh);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transform: translate(3vw, 5vh);
+}
+
+/* Blink the error message by changing the color from yellow to red */
+@keyframes errorMsg {
+    from {
+        color: yellow;
+    }
+
+    to {
+        color: red;
+    }
+}
+
+/* Format the error message */
+#error {
+    font-size: 1vw;
+    color: yellow;
+    animation: errorMsg;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    text-align: center;
+    position: relative;
+    top: -2vh;
+    left: -6vw;
+    z-index: -1;
+}
+
+#hint {
+    text-align: center;
+    font-size: 1vw;
+    padding-top: -1vh;
+    margin-top: -2vh;
+    color: yellow;
+    position: relative;
+    left: -7vw;
+}
+
+.signUpContainer {
+  transform: translate(-55vw, -15vh);
+}
+
+
+/* Backgrounf image */
+.image {
+    background-image: url("images/newHomeImage.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  
+}
+
+.bodyContainer{
+    display: grid;
+    justify-content: center;
+    transform: translateX(7vw);
+}
+
+
+/* Both forgot eamail and password */
+body {
+    background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
+}
+
+}
