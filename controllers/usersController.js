@@ -52,9 +52,9 @@ router.get("/signIn", (req, res) => {
     res.render("signInPage");
 });
 
-// Redirect to "songsLibPage" page
+// Redirect to "songsPage" page
 router.get("/songsLibPage", (req, res) => {
-    res.render("songsLibPage");
+    res.render("songsPage");
 });
 
 
@@ -71,7 +71,7 @@ router.post("/songsLib", (req, res) => {
     axios.get(url).then((data) => {
         console.log(data);
         // console.log(data.data.items[0].snippet.thumbnails.default.url)
-        res.render("songsLibPage", { searchedTitle: data.data.items });
+        res.render("songsPage", { searchedTitle: data.data.items });
     });
 });
 
@@ -92,7 +92,7 @@ router.post("/signIn", async (req, res) => {
             let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=${userTitle.title}&key=${process.env.API_KEY}`;
 
             axios.get(url).then((data) => {
-                res.render("songsLibPage", {
+                res.render("songsPage", {
                     searchedTitle: data.data.items,
                     // userData: userData[0]
                 });
